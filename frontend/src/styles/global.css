@@ -35,3 +35,40 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* 受控轨迹与状态标识 */
+.flow-track { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; font-size: 12px; }
+.track-step { background: #eef2f7; color: var(--muted); border-radius: 6px; padding: 3px 8px; display: inline-flex; align-items: center; gap: 6px; }
+.track-step i { font-style: normal; color: #94a3b8; }
+.track-step.track-on { background: #e3edff; color: #1d4ed8; }
+.status-tag { border-radius: 999px; padding: 2px 10px; font-size: 12px; white-space: nowrap; }
+.status-tag[data-status="已通过"] { background: #e7f6ec; color: #1a7f37; }
+.status-tag[data-status="待审核"] { background: #fff4e0; color: #b45309; }
+.status-tag[data-status="异常值"] { background: #fde8e8; color: #b42318; }
+.status-tag[data-status="已采集"] { background: #eef2f7; color: #475569; }
+.stat-hot { color: #b42318; }
+.success-text { color: #1a7f37; }
+.link.danger-link { color: #b42318; }
+.btn.danger { background: #b42318; border-color: #b42318; color: #fff; }
+.btn[disabled] { opacity: 0.55; cursor: not-allowed; }
+.link[disabled] { opacity: 0.5; cursor: not-allowed; }
+
+/* 弹窗 */
+.modal-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 20; padding: 24px; }
+.modal { background: #fff; border-radius: 10px; padding: 18px 20px; width: 460px; max-width: 100%; max-height: 86vh; overflow: auto; }
+.modal.wide { width: 880px; }
+.modal h3 { margin: 0 0 6px; font-size: 16px; }
+.modal-tip { color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+.modal-field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; font-size: 12px; color: var(--muted); }
+.modal-field input { border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; color: #1f2937; }
+.modal-field em { color: #b42318; font-style: normal; margin-left: 2px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+.review-data { display: grid; grid-template-columns: 90px 1fr; gap: 6px 10px; margin: 0 0 10px; font-size: 13px; }
+.review-data dt { color: var(--muted); }
+.review-data dd { margin: 0; word-break: break-all; }
+.pre-line { white-space: pre-line; }
+
+/* 整编待办分组标题 */
+.section-head { margin: 18px 0 8px; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.section-head .badge { background: #b42318; color: #fff; border-radius: 999px; font-size: 11px; padding: 1px 8px; }
+.source-tag { background: #e3edff; color: #1d4ed8; border-radius: 999px; padding: 1px 8px; font-size: 12px; }
