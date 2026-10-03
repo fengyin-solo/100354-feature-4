@@ -24,6 +24,10 @@
       </span>
     </p>
 
+    <p class="status-legend">
+      <span class="legend-item">流量记录审核通过后，按站点与年度自动同步「待整编」待办；未通过的记录不会进入整编。</span>
+    </p>
+
     <form class="filter-bar" @submit.prevent="reload">
       <label v-for="field in filterFields" :key="field" class="filter-item">
         <span>{{ field }}</span>
